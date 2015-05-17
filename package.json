@@ -1,0 +1,34 @@
+{
+  "name": "async_await_example",
+  "version": "0.1.0",
+  "description": "Babel.js project skeleton for code coverage, unit testing, etc.",
+  "main": "dist/app.js",
+  "dependencies": {
+    "babel-runtime": "^5.4.3"
+  },
+  "devDependencies": {
+    "babel": "^5.4.3",
+    "babel-core": "^5.4.3",
+    "babel-eslint": "^3.1.4",
+    "eslint": "^0.21.1",
+    "gulp": "^3.8.11",
+    "gulp-babel": "^5.1.0",
+    "gulp-eslint": "^0.12.0",
+    "gulp-istanbul": "^0.8.1",
+    "gulp-mocha": "^2.0.1",
+    "gulp-concat": "^2.5.2",
+    "gulp-sourcemaps": "^1.5.2",
+    "chai": "^2.2.0",
+    "html_table_reporter": "git://github.com/Gauge/html_table_reporter.git",
+    "isparta": "^3.0.3",
+    "mocha": "^2.2.4",
+    "rootpath": "^0.1.2"
+  },
+  "scripts": {
+    "install": "./node_modules/gulp/bin/gulp.js",
+    "start": "node dist/app.js",
+    "test": "./node_modules/gulp/bin/gulp.js test"
+  },
+  "author": "Eric Cornelius",
+  "license": "MIT"
+}

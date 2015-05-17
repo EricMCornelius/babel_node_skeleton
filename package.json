@@ -1,6 +1,6 @@
 {
   "name": "babel_node_skeleton",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Babel.js project skeleton for code coverage, unit testing, etc.",
   "main": "dist/app.js",
   "dependencies": {
@@ -26,7 +26,7 @@
     "rootpath": "^0.1.2"
   },
   "scripts": {
-    "install": "./node_modules/gulp/bin/gulp.js",
+    "postinstall": "./node_modules/gulp/bin/gulp.js",
     "start": "node dist/app.js",
     "test": "./node_modules/gulp/bin/gulp.js test && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },

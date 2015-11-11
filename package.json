@@ -1,0 +1,72 @@
+{
+  "name": "babel_node_skeleton",
+  "version": "0.2.0",
+  "description": "Babel.js project skeleton for code coverage, unit testing, etc.",
+  "homepage": "https://github.com/ericmcornelius/babel_node_skeleton",
+  "keywords": [
+    "babel",
+    "skeleton"
+  ],
+  "author": {
+    "name": "Eric Cornelius",
+    "email": "ericmcornelius@gmail.com",
+    "url": "https://github.com/ericmcornelius"
+  },
+  "main": "dist/test.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ericmcornelius/babel_node_skeleton.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ericmcornelius/babel_node_skeleton/issues",
+    "email": "ericmcornelius@gmail.com"
+  },
+  "engines": {
+    "node": ">=4.2"
+  },
+  "dependencies": {
+    "lodash": "^3.10.1"
+  },
+  "scripts": {
+    "test": "./node_modules/gulp/bin/gulp.js test",
+    "prepublish": "./node_modules/gulp/bin/gulp.js build"
+  },
+  "readme": "README.md",
+  "devDependencies": {
+    "babel-cli": "^6.1.2",
+    "babel-core": "^6.1.4",
+    "babel-eslint": "^4.1.5",
+    "babel-plugin-syntax-async-functions": "^6.0.14",
+    "babel-plugin-transform-regenerator": "^6.0.18",
+    "babel-plugin-transform-runtime": "^6.1.2",
+    "babel-polyfill": "^6.0.16",
+    "babel-preset-es2015": "^6.1.2",
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "browserify-shim": "^3.8.11",
+    "chai": "^3.4.1",
+    "chai-things": "^0.2.0",
+    "eslint": "^1.9.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-eslint": "^1.1.0",
+    "gulp-istanbul": "^0.10.2",
+    "gulp-mocha": "^2.1.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "isparta": "git+https://github.com/neoziro/isparta.git#3fc8496",
+    "mocha": "^2.3.3"
+  },
+  "browserify-shim": {
+    "lodash": "global:_"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify"
+      ],
+      "browserify-shim"
+    ]
+  }
+}

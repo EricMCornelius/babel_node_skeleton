@@ -1,3 +1,4 @@
+import polyfill from 'babel-polyfill';
 import chai from 'chai';
 import _ from 'lodash';
 

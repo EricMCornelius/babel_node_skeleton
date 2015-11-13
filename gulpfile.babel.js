@@ -1,3 +1,4 @@
+import fs from 'fs';
 import gulp from 'gulp';
 import sourcemaps from 'gulp-sourcemaps';
 import babel from 'gulp-babel';
@@ -7,6 +8,7 @@ import mocha from 'gulp-mocha';
 import eslint from 'gulp-eslint';
 import rename from 'gulp-rename';
 import browserify from 'browserify';
+
 import {
   Instrumenter as instrumenter
 }
@@ -21,9 +23,9 @@ let build = () => {
 };
 
 let bundle = () => {
-  browserify('./dist/fiql.js').bundle()
-    .pipe(rename('bundle.js'))
-    .pipe(gulp.dest('./dist'));
+  browserify('./dist/main.js', {standalone: 'bundle'})
+    .bundle()
+    .pipe(fs.createWriteStream('./dist/bundle.js'));
 };
 
 let test = cb => {
@@ -41,7 +43,6 @@ let test = cb => {
         .pipe(babel())
         .pipe(mocha({
           require: ['chai']
-          // grep: 'fiql.bottomup'
         }))
         .pipe(istanbul.writeReports())
     });
